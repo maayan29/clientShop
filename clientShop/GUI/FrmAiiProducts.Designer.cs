@@ -48,6 +48,7 @@
             this.Controls.Add(this.dgvAllProducts);
             this.Name = "FrmAllProducts";
             this.Text = "FrmProducts";
+            this.Load += new System.EventHandler(this.FrmAllProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllProducts)).EndInit();
             this.ResumeLayout(false);
 

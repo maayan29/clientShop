@@ -14,6 +14,7 @@ namespace clientShop.GUI
     public partial class FrmAllProducts : Form
     {
         Connect con;
+        List<Products> lstproducts;
         public FrmAllProducts()
         {
             InitializeComponent();
@@ -22,7 +23,18 @@ namespace clientShop.GUI
 
         private async void FrmAllProducts_Load(object sender, EventArgs e)
         {
-            dgvAllProducts.DataSource = await con.GetAllProducts();
+            lstproducts = await con.GetAllProducts();
+            dgvAllProducts.DataSource = lstproducts.Select(p => new
+            {
+                p.ProductId,
+                p.ProductName,
+                p.Category,
+                p.Material,
+                p.Price,
+            }).ToList();
+            dgvAllProducts.Columns[0].
+
         }
+
     }
 }

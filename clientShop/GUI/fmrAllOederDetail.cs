@@ -16,5 +16,10 @@ namespace clientShop.GUI
         {
             InitializeComponent();
         }
+
+        private void fmrAllOederDetail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

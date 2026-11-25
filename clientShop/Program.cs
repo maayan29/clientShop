@@ -17,7 +17,7 @@ namespace clientShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAllOrders());
+            Application.Run(new FrmAllProducts());
         }
     }
 }
